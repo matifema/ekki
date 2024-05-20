@@ -1,0 +1,6 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/usr/source/repos/mygame/Content/down.png","C:/Users/usr/source/repos/mygame/Content/bin/DesktopGL/down.xnb","TextureProcessor","Texture2DContent",4399,969,0.0893519
+"C:/Users/usr/source/repos/mygame/Content/galleryFont.spritefont","C:/Users/usr/source/repos/mygame/Content/bin/DesktopGL/galleryFont.xnb","FontDescriptionProcessor","SpriteFontContent",2065,70687,0.1680849
+"C:/Users/usr/source/repos/mygame/Content/left.png","C:/Users/usr/source/repos/mygame/Content/bin/DesktopGL/left.xnb","TextureProcessor","Texture2DContent",4388,969,0.0014767
+"C:/Users/usr/source/repos/mygame/Content/right.png","C:/Users/usr/source/repos/mygame/Content/bin/DesktopGL/right.xnb","TextureProcessor","Texture2DContent",4393,969,0.0012595
+"C:/Users/usr/source/repos/mygame/Content/up.png","C:/Users/usr/source/repos/mygame/Content/bin/DesktopGL/up.xnb","TextureProcessor","Texture2DContent",4395,1021,0.00165
