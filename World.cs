@@ -16,7 +16,9 @@ public class World
     }
     public void LoadAssets()
 	{
-        _player.LoadSprites(Globals.Content);
+        _player.LoadSprites();
+		_worldMap.LoadSprites();
+		_worldMap.LoadMap("Spawn");
     }
 
 	public void WorldUpdate()

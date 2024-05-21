@@ -1,6 +1,14 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/usr/source/repos/mygame/Content/down.png","C:/Users/usr/source/repos/mygame/Content/bin/DesktopGL/down.xnb","TextureProcessor","Texture2DContent",4399,969,0.0893519
-"C:/Users/usr/source/repos/mygame/Content/galleryFont.spritefont","C:/Users/usr/source/repos/mygame/Content/bin/DesktopGL/galleryFont.xnb","FontDescriptionProcessor","SpriteFontContent",2065,70687,0.1680849
-"C:/Users/usr/source/repos/mygame/Content/left.png","C:/Users/usr/source/repos/mygame/Content/bin/DesktopGL/left.xnb","TextureProcessor","Texture2DContent",4388,969,0.0014767
-"C:/Users/usr/source/repos/mygame/Content/right.png","C:/Users/usr/source/repos/mygame/Content/bin/DesktopGL/right.xnb","TextureProcessor","Texture2DContent",4393,969,0.0012595
-"C:/Users/usr/source/repos/mygame/Content/up.png","C:/Users/usr/source/repos/mygame/Content/bin/DesktopGL/up.xnb","TextureProcessor","Texture2DContent",4395,1021,0.00165
+"/home/hos/Desktop/Progetti/ekki/Content/down.png","/home/hos/Desktop/Progetti/ekki/Content/bin/DesktopGL/down.xnb","TextureProcessor","Texture2DContent",4399,969,0.2318596
+"/home/hos/Desktop/Progetti/ekki/Content/galleryFont.spritefont","/home/hos/Desktop/Progetti/ekki/Content/bin/DesktopGL/galleryFont.xnb","FontDescriptionProcessor","SpriteFontContent",2009,70687,0.2221825
+"/home/hos/Desktop/Progetti/ekki/Content/GrassHills.png","/home/hos/Desktop/Progetti/ekki/Content/bin/DesktopGL/GrassHills.xnb","TextureProcessor","Texture2DContent",2908,61525,0.0071353
+"/home/hos/Desktop/Progetti/ekki/Content/Idle_01_Back_L-Sheet.png","/home/hos/Desktop/Progetti/ekki/Content/bin/DesktopGL/Idle_01_Back_L-Sheet.xnb","TextureProcessor","Texture2DContent",284,4181,0.2001993
+"/home/hos/Desktop/Progetti/ekki/Content/Idle_01_Front_L-Sheet.png","/home/hos/Desktop/Progetti/ekki/Content/bin/DesktopGL/Idle_01_Front_L-Sheet.xnb","TextureProcessor","Texture2DContent",359,4181,0.0010841
+"/home/hos/Desktop/Progetti/ekki/Content/Idle_01_Front_R-Sheet.png","/home/hos/Desktop/Progetti/ekki/Content/bin/DesktopGL/Idle_01_Front_R-Sheet.xnb","TextureProcessor","Texture2DContent",368,4181,0.0012079
+"/home/hos/Desktop/Progetti/ekki/Content/Idle_02_Back_L-Sheet.png","/home/hos/Desktop/Progetti/ekki/Content/bin/DesktopGL/Idle_02_Back_L-Sheet.xnb","TextureProcessor","Texture2DContent",288,4181,0.1830033
+"/home/hos/Desktop/Progetti/ekki/Content/left.png","/home/hos/Desktop/Progetti/ekki/Content/bin/DesktopGL/left.xnb","TextureProcessor","Texture2DContent",4388,969,0.0011446
+"/home/hos/Desktop/Progetti/ekki/Content/right.png","/home/hos/Desktop/Progetti/ekki/Content/bin/DesktopGL/right.xnb","TextureProcessor","Texture2DContent",4393,969,0.0011563
+"/home/hos/Desktop/Progetti/ekki/Content/up.png","/home/hos/Desktop/Progetti/ekki/Content/bin/DesktopGL/up.xnb","TextureProcessor","Texture2DContent",4395,1021,0.0009844
+"/home/hos/Desktop/Progetti/ekki/Content/Walk_02_Back_L-Sheet.png","/home/hos/Desktop/Progetti/ekki/Content/bin/DesktopGL/Walk_02_Back_L-Sheet.xnb","TextureProcessor","Texture2DContent",310,4181,0.0013241
+"/home/hos/Desktop/Progetti/ekki/Content/Walk_02_Front_L-Sheet.png","/home/hos/Desktop/Progetti/ekki/Content/bin/DesktopGL/Walk_02_Front_L-Sheet.xnb","TextureProcessor","Texture2DContent",373,4181,0.1400953
+"/home/hos/Desktop/Progetti/ekki/Content/Walk_02_Front_R-Sheet.png","/home/hos/Desktop/Progetti/ekki/Content/bin/DesktopGL/Walk_02_Front_R-Sheet.xnb","TextureProcessor","Texture2DContent",390,4181,0.0011577

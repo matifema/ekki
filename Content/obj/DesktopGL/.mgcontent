@@ -4,13 +4,29 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/usr/source/repos/mygame/Content/down.png</File>
-    <File>C:/Users/usr/source/repos/mygame/Content/galleryFont.spritefont</File>
-    <File>C:/Users/usr/source/repos/mygame/Content/left.png</File>
-    <File>C:/Users/usr/source/repos/mygame/Content/right.png</File>
-    <File>C:/Users/usr/source/repos/mygame/Content/up.png</File>
+    <File>/home/hos/Desktop/Progetti/ekki/Content/down.png</File>
+    <File>/home/hos/Desktop/Progetti/ekki/Content/galleryFont.spritefont</File>
+    <File>/home/hos/Desktop/Progetti/ekki/Content/GrassHills.png</File>
+    <File>/home/hos/Desktop/Progetti/ekki/Content/Idle_01_Back_L-Sheet.png</File>
+    <File>/home/hos/Desktop/Progetti/ekki/Content/Idle_01_Front_L-Sheet.png</File>
+    <File>/home/hos/Desktop/Progetti/ekki/Content/Idle_01_Front_R-Sheet.png</File>
+    <File>/home/hos/Desktop/Progetti/ekki/Content/Idle_02_Back_L-Sheet.png</File>
+    <File>/home/hos/Desktop/Progetti/ekki/Content/left.png</File>
+    <File>/home/hos/Desktop/Progetti/ekki/Content/right.png</File>
+    <File>/home/hos/Desktop/Progetti/ekki/Content/up.png</File>
+    <File>/home/hos/Desktop/Progetti/ekki/Content/Walk_02_Back_L-Sheet.png</File>
+    <File>/home/hos/Desktop/Progetti/ekki/Content/Walk_02_Front_L-Sheet.png</File>
+    <File>/home/hos/Desktop/Progetti/ekki/Content/Walk_02_Front_R-Sheet.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

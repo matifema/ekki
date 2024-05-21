@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -7,7 +8,7 @@ namespace mygame
     public class Ekki : Game
     {
         private RenderTarget2D _renderTarget;
-        private int _targetHeight = 144, _targetWidth = 160;
+        private int _targetHeight = 144*2, _targetWidth = 160*2;
         private int _scale = 4;
         private Rectangle _actualScreenRectangle;
 
@@ -50,6 +51,9 @@ namespace mygame
             
             // loading font
             Globals.gameFont = Content.Load<SpriteFont>("galleryFont");
+            
+            //TODO REMOVE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            Globals.World.LoadAssets();
         }
 
         protected override void Update(GameTime gameTime)
@@ -61,6 +65,9 @@ namespace mygame
 
             if (Keyboard.GetState().IsKeyDown(Keys.F11))
                 ToggleFullScreen();
+
+            if (Keyboard.GetState().IsKeyDown(Keys.F1))
+                ToggleWorldEdit();
 
             if (Globals.isIngame)
             {
@@ -84,7 +91,8 @@ namespace mygame
             Globals.SpriteBatch.Begin();
 
                 // TODO REMOVE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                Globals.World._player.Draw();
+                Globals.World._worldMap.Draw();
+                Globals.World._player.Draw(gameTime);
 
             Globals.SpriteBatch.End();
 
@@ -96,9 +104,14 @@ namespace mygame
             Globals.SpriteBatch.Draw(_renderTarget, _actualScreenRectangle, Color.White);
             Globals.SpriteBatch.End();
 
+            Globals.renderedFrames++;
             base.Draw(gameTime);
         }
 
+        private void ToggleWorldEdit()
+        {
+            
+        }
         void ToggleFullScreen()
         {
             if (!Globals.graphics.IsFullScreen)
