@@ -2,7 +2,8 @@
 
 Welcome to **EKKI**, a souls-like game about a chicken kicking ass.
 
-![Gameplay GIF](Screenshots/ragechicken.webp)
+
+<img alt="made with DALL-E" src="Screenshots/ragechicken.webp" width="200" height="200">
 
 ## Development TODO list
 - [ ] **entity actions**
