@@ -18,7 +18,6 @@ public class Map
     public void LoadSprites()
     {
         grass = Globals.CutSpriteSheet(Globals.Content.Load<Texture2D>("GrassHills"));
-        Console.WriteLine(grass.Count);
     }
 
     public void LoadMap(string MapName)
