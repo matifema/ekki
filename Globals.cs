@@ -1,17 +1,19 @@
-﻿using System.Collections.Generic;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
 public static class Globals
 {
 	public static int renderedFrames = 0;
-	public static World World;
-	public static SpriteFont gameFont {  get; set; }
+    public static GameTime time { get; set; }
 	public static bool isIngame {  get; set; }
+    internal static bool isEditing { get; set; }
+	public static Point WindowSize { get; set; }
+    public static SpriteFont gameFont {  get; set; }
+    internal static Point mousePosition { get; set; }
 	public static ContentManager Content { get; set; }
 	public static SpriteBatch SpriteBatch { get; set; }
-	public static Point WindowSize { get; set; }
     public static GraphicsDeviceManager graphics {  get; set; }
 
     public static List<Texture2D> CutSpriteSheet(Texture2D texture)
@@ -45,4 +47,5 @@ public static class Globals
 
         return textures;
     }
+
 }

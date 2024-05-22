@@ -44,18 +44,6 @@
 /processorParam:TextureFormat=Color
 /build:GrassHills.png
 
-#begin Idle_01_Back_L-Sheet.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Idle_01_Back_L-Sheet.png
-
 #begin Idle_01_Front_L-Sheet.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -92,6 +80,18 @@
 /processorParam:TextureFormat=Color
 /build:Idle_02_Back_L-Sheet.png
 
+#begin Lake_Tileset.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Lake_Tileset.png
+
 #begin left.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -103,6 +103,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:left.png
+
+#begin Props.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Props.png
 
 #begin right.png
 /importer:TextureImporter

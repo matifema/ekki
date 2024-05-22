@@ -15,19 +15,13 @@ enum Direction {
 }
 
 
-public class Player
+public class Player : Component
 {
-    internal List<Texture2D> upIdle;
-    internal List<Texture2D> leftIdle;
-    internal List<Texture2D> rightIdle;
-    internal List<Texture2D> upWalk;
-    internal List<Texture2D> leftWalk;
-    internal List<Texture2D> rightWalk;
+    internal float velocity = 1;
+    internal Texture2D currentSprite;
     internal Vector2 currentPosition = new(0,0);
     internal Direction currentDirection = Direction.DOWN;
-    internal Texture2D currentSprite;
-    internal List<Texture2D> currentAnimation;
-    internal float velocity = 1;
+    internal List<Texture2D> upIdle, leftIdle, rightIdle, upWalk, leftWalk, rightWalk, currentAnimation;
 
     public Player() { }
 
@@ -79,7 +73,9 @@ public class Player
         currentSprite = leftIdle[0];
     }
 
-    internal void Draw(GameTime time)
+    public override void Update () { }
+
+    public override void Draw()
     {
         if(Globals.renderedFrames % 15 == 0)
         {
