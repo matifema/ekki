@@ -59,10 +59,11 @@ C:/Users/usr/source/repos/mygame/bin/Debug/net6.0/Content/galleryFont.xnb
 /home/hos/Desktop/Progetti/ekki/obj/Debug/net6.0/mygame.genruntimeconfig.cache
 /home/hos/Desktop/Progetti/ekki/obj/Debug/net6.0/ref/mygame.dll
 /home/hos/Desktop/Progetti/ekki/bin/Debug/net6.0/Content/GrassHills.xnb
-/home/hos/Desktop/Progetti/ekki/bin/Debug/net6.0/Content/Idle_01_Back_L-Sheet.xnb
 /home/hos/Desktop/Progetti/ekki/bin/Debug/net6.0/Content/Idle_01_Front_L-Sheet.xnb
 /home/hos/Desktop/Progetti/ekki/bin/Debug/net6.0/Content/Idle_01_Front_R-Sheet.xnb
 /home/hos/Desktop/Progetti/ekki/bin/Debug/net6.0/Content/Walk_02_Front_L-Sheet.xnb
 /home/hos/Desktop/Progetti/ekki/bin/Debug/net6.0/Content/Walk_02_Front_R-Sheet.xnb
 /home/hos/Desktop/Progetti/ekki/bin/Debug/net6.0/Content/Idle_02_Back_L-Sheet.xnb
 /home/hos/Desktop/Progetti/ekki/bin/Debug/net6.0/Content/Walk_02_Back_L-Sheet.xnb
+/home/hos/Desktop/Progetti/ekki/bin/Debug/net6.0/Content/Lake_Tileset.xnb
+/home/hos/Desktop/Progetti/ekki/bin/Debug/net6.0/Content/Props.xnb

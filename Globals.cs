@@ -2,19 +2,30 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using System.Linq;
+using System;
 
 public static class Globals
 {
-	public static int renderedFrames = 0;
+    public static int renderedFrames = 0;
     public static GameTime time { get; set; }
-	public static bool isIngame {  get; set; }
+    public static List<Texture2D> LoadedSprites = new();
+    internal static Scene CurrentScene;
+    private static MouseState _currentMouse, _previousMouse = Mouse.GetState();
+
+    public static bool isIngame { get; set; }
     internal static bool isEditing { get; set; }
-	public static Point WindowSize { get; set; }
-    public static SpriteFont gameFont {  get; set; }
-    internal static Point mousePosition { get; set; }
-	public static ContentManager Content { get; set; }
-	public static SpriteBatch SpriteBatch { get; set; }
-    public static GraphicsDeviceManager graphics {  get; set; }
+    public static Point WindowSize { get; set; }
+    public static SpriteFont gameFont { get; set; }
+    public static ContentManager Content { get; set; }
+    public static SpriteBatch SpriteBatch { get; set; }
+    public static GraphicsDeviceManager graphics { get; set; }
+
+    public static Point GetMousePosition()
+    {
+        return new Point(Mouse.GetState().X / 4, Mouse.GetState().Y / 4);
+    }
 
     public static List<Texture2D> CutSpriteSheet(Texture2D texture)
     {
@@ -48,4 +59,70 @@ public static class Globals
         return textures;
     }
 
+    public static void LoadSprites(string SpriteSheet)
+    {
+        LoadedSprites.AddRange(CutSpriteSheet(Content.Load<Texture2D>(SpriteSheet)));
+    }
+
+    public static bool HasClickedHere(Rectangle rectangle, bool isLeftClick)
+    {
+        var result = false;
+        _currentMouse = Mouse.GetState();
+        
+        var currentBtn = isLeftClick ? _currentMouse.LeftButton : _currentMouse.RightButton; 
+        var prevBtn = isLeftClick ? _previousMouse.LeftButton : _previousMouse.RightButton; 
+
+        var mouseRectangle = new Rectangle(_currentMouse.X/4, _currentMouse.Y/4, 1, 1);
+
+        if(mouseRectangle.Intersects(rectangle))
+        {
+            if(currentBtn == ButtonState.Released && prevBtn == ButtonState.Pressed)
+            {
+                result = true;
+            }
+        }
+        _previousMouse = _currentMouse;
+
+        return result;
+    }
+
+    // todo:: remove
+    public static bool HasNotClickedHere(Rectangle rectangle, bool isLeftClick)
+    {
+        var result = false;
+        _currentMouse = Mouse.GetState();
+
+        var currentBtn = isLeftClick ? _currentMouse.LeftButton : _currentMouse.RightButton; 
+        var prevBtn = isLeftClick ? _previousMouse.LeftButton : _previousMouse.RightButton; 
+
+        var mouseRectangle = new Rectangle(_currentMouse.X/4, _currentMouse.Y/4, 1, 1);
+
+        if(!mouseRectangle.Intersects(rectangle))
+        {
+            if(currentBtn == ButtonState.Released && prevBtn == ButtonState.Pressed)
+            {
+                result = true;
+            }
+        }
+        _previousMouse = _currentMouse;
+
+        return result;
+    }
+
+    public static bool HasClicked(bool isLeftClick)
+    {
+        var result = false;
+        _currentMouse = Mouse.GetState();
+
+        var currentBtn = isLeftClick ? _currentMouse.LeftButton : _currentMouse.RightButton; 
+        var prevBtn = isLeftClick ? _previousMouse.LeftButton : _previousMouse.RightButton; 
+
+        if(currentBtn == ButtonState.Released && prevBtn == ButtonState.Pressed)
+        {
+            result = true;
+        }
+        _previousMouse = _currentMouse;
+
+        return result;
+    }
 }

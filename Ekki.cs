@@ -2,25 +2,24 @@
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
-using System;
 
 namespace mygame
 {
     public class Ekki : Game
     {
-        private World _testWorld;
         private RenderTarget2D _renderTarget;
         private KeyboardState _previousKeypress;
         private Rectangle _actualScreenRectangle;
         public List<Component> _renderedComponents = new();
         private int _targetHeight = 288, _targetWidth = 512, _scale = 4;
+        private WorldEditor _Editor;
 
         public Ekki()
         {
             Globals.graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
-            
+
 
             // setting backbuffer to desired scaled size
             Globals.graphics.PreferredBackBufferWidth = _targetWidth * _scale;
@@ -37,13 +36,10 @@ namespace mygame
             // target rectagle, scaled
             _actualScreenRectangle = new Rectangle(x: 0, y: 0, width: _scale * _targetWidth, height: _scale * _targetHeight);
 
+            // set some global variables
             Globals.Content = Content;
-
-            //TODO maybe remove this
-            _testWorld = new();
-
             Globals.isEditing = false;
-            
+
             base.Initialize();
         }
 
@@ -51,33 +47,49 @@ namespace mygame
         {
             // creating spritebatch
             Globals.SpriteBatch = new SpriteBatch(GraphicsDevice);
-            
+
             // loading font
             Globals.gameFont = Content.Load<SpriteFont>("galleryFont");
 
-            //TODO maybe remove this
-            _testWorld.LoadAssets();
+            // loading sprites
+            Globals.LoadSprites("GrassHills");
+            Globals.LoadSprites("Lake_Tileset");
+            Globals.LoadSprites("Props");
+
+            // initiating scene at spawn
+            Globals.CurrentScene = new Scene
+            (
+                new Map("Spawn")
+            );
+            Globals.CurrentScene.LoadAssets();
         }
 
         protected override void Update(GameTime gameTime)
         {
             // runs at every frame. monogame usa 60fps di default.
 
-            //if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-            //    Exit();
-
+            // checking for fullscreen key
             if (Keyboard.GetState().IsKeyDown(Keys.F11) && Keyboard.GetState() != _previousKeypress)
                 ToggleFullScreen();
 
+            // checking for map editor key
             if (Keyboard.GetState().IsKeyDown(Keys.F1) && Keyboard.GetState() != _previousKeypress)
                 ToggleWorldEdit();
 
             _previousKeypress = Keyboard.GetState();
 
-            //TODO maybe remove this
-            _testWorld.WorldUpdate();
+            // update loop
+            foreach (Component component in _renderedComponents)
+            {
+                component.Update();
+            }
 
+            // scene update
+            Globals.CurrentScene.Update();
+
+            // gametime update
             Globals.time = gameTime;
+
             base.Update(gameTime);
         }
 
@@ -89,33 +101,22 @@ namespace mygame
 
             // setting the rendertarget to the 2D rendertexture 
             GraphicsDevice.SetRenderTarget(_renderTarget);
-            GraphicsDevice.Clear(Color.White);
-
-
+            GraphicsDevice.Clear(new Color(79, 79, 79));
 
 
             // drawing game
             Globals.SpriteBatch.Begin();
 
-            // TODO: draw game components
+            // draw scene
+            Globals.CurrentScene.Draw();
+
+            // draw loop
             foreach (Component component in _renderedComponents)
             {
                 component.Draw();
             }
-            
-            // TODO maybe remove this
-            _testWorld._worldMap.Draw();
-            _testWorld._player.Draw();
-            
-            if (Globals.isEditing)
-            {
-                _testWorld._Editor.Draw();
-            }
-            
+
             Globals.SpriteBatch.End();
-
-
-
 
             // rendering target to backbuffer
             GraphicsDevice.SetRenderTarget(null); // switching to backbuffer
@@ -125,6 +126,7 @@ namespace mygame
             Globals.SpriteBatch.Draw(_renderTarget, _actualScreenRectangle, Color.White);
             Globals.SpriteBatch.End();
 
+            // keeping count of frames
             Globals.renderedFrames++;
 
             base.Draw(gameTime);
@@ -132,10 +134,20 @@ namespace mygame
 
         protected private void ToggleWorldEdit()
         {
-            Globals.mousePosition = Mouse.GetState().Position;
             Globals.isEditing = !Globals.isEditing;
+
+            // adds/removes the editor from renders
+            if (Globals.isEditing)
+            {
+                _Editor = new(Globals.LoadedSprites);
+                _renderedComponents.Add(_Editor);
+            }
+            else
+            {
+                _renderedComponents.Remove(_Editor);
+            }
         }
-        
+
         protected void ToggleFullScreen()
         {
             if (!Globals.graphics.IsFullScreen)
@@ -184,6 +196,6 @@ namespace mygame
             innerRectangle.Offset(delta);
             return innerRectangle;
         }
-    
+
     }
 }

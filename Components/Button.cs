@@ -8,13 +8,12 @@ public class Button : Component
 {
     #region Fields
 
+    private MouseState _previousMouse = Mouse.GetState();
     private MouseState _currentMouse;
 
     private SpriteFont _font;
 
     private bool _isHovering;
-
-    private MouseState _previousMouse;
 
     private Texture2D _texture;
 
@@ -22,7 +21,7 @@ public class Button : Component
 
     #region Properties
 
-    public event EventHandler Click;
+    public event EventHandler<ButtonClickEventArgs> Click;
 
     public bool Clicked { get; private set; }
 
@@ -73,10 +72,9 @@ public class Button : Component
     
     public override void Update()
     {
-        _previousMouse = _currentMouse;
         _currentMouse = Mouse.GetState();
 
-        var mouseRectangle = new Rectangle(_currentMouse.X, _currentMouse.Y, 1, 1);
+        var mouseRectangle = new Rectangle(_currentMouse.X/4, _currentMouse.Y/4, 1, 1);
 
         _isHovering = false;
 
@@ -86,9 +84,11 @@ public class Button : Component
 
             if(_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
             {
-                Click?.Invoke(this, new EventArgs());
+                Click?.Invoke(this, new ButtonClickEventArgs(_texture));
             }
         }
+
+        _previousMouse = _currentMouse;
     }
 
     #endregion

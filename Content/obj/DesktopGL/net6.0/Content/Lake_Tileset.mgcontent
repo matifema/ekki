@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>/home/hos/Desktop/Progetti/ekki/Content/Idle_01_Back_L-Sheet.png</SourceFile>
-  <SourceTime>2023-07-22T18:19:46+02:00</SourceTime>
-  <DestFile>/home/hos/Desktop/Progetti/ekki/Content/bin/DesktopGL/Idle_01_Back_L-Sheet.xnb</DestFile>
-  <DestTime>2024-05-21T00:23:42.9687103+02:00</DestTime>
+  <SourceFile>/home/hos/Desktop/Progetti/ekki/Content/Lake_Tileset.png</SourceFile>
+  <SourceTime>2021-06-24T23:27:42+02:00</SourceTime>
+  <DestFile>/home/hos/Desktop/Progetti/ekki/Content/bin/DesktopGL/Content/Lake_Tileset.xnb</DestFile>
+  <DestTime>2024-05-21T18:30:27.3610348+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

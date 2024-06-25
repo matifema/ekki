@@ -1,14 +1,11 @@
 # EKKI
 
-Welcome to **EKKI**, a souls-like game about a chicken kicking ass.
-
-
 <img alt="made with DALL-E" src="Screenshots/ragechicken.webp" width="200" height="200">
 
 ## Development TODO list
 - [ ] **entity actions**
     - [x] 8 direction walking
-    - [ ] 8 direction walking animations
+    - [x] 4 direction walking animations
     - [ ] attack
         - [ ] ranged
         - [ ] melee
@@ -17,9 +14,10 @@ Welcome to **EKKI**, a souls-like game about a chicken kicking ass.
     - [ ] jump
 
 - [ ] **game design**
-    - [ ] map editor
-        - [ ] select terrain
-        - [ ] map saving
+    - [x] map editor
+        - [x] draw terrain
+        - [x] delete terrain
+        - [x] map saving
         - [x] map loading
     - [ ] camera
         - [ ] follow player

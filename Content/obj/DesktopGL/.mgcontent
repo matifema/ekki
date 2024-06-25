@@ -7,11 +7,12 @@
     <File>/home/hos/Desktop/Progetti/ekki/Content/down.png</File>
     <File>/home/hos/Desktop/Progetti/ekki/Content/galleryFont.spritefont</File>
     <File>/home/hos/Desktop/Progetti/ekki/Content/GrassHills.png</File>
-    <File>/home/hos/Desktop/Progetti/ekki/Content/Idle_01_Back_L-Sheet.png</File>
     <File>/home/hos/Desktop/Progetti/ekki/Content/Idle_01_Front_L-Sheet.png</File>
     <File>/home/hos/Desktop/Progetti/ekki/Content/Idle_01_Front_R-Sheet.png</File>
     <File>/home/hos/Desktop/Progetti/ekki/Content/Idle_02_Back_L-Sheet.png</File>
+    <File>/home/hos/Desktop/Progetti/ekki/Content/Lake_Tileset.png</File>
     <File>/home/hos/Desktop/Progetti/ekki/Content/left.png</File>
+    <File>/home/hos/Desktop/Progetti/ekki/Content/Props.png</File>
     <File>/home/hos/Desktop/Progetti/ekki/Content/right.png</File>
     <File>/home/hos/Desktop/Progetti/ekki/Content/up.png</File>
     <File>/home/hos/Desktop/Progetti/ekki/Content/Walk_02_Back_L-Sheet.png</File>
@@ -19,6 +20,7 @@
     <File>/home/hos/Desktop/Progetti/ekki/Content/Walk_02_Front_R-Sheet.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
