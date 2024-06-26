@@ -2,7 +2,13 @@
 
 <img alt="made with DALL-E" src="Screenshots/ragechicken.webp" width="200" height="200">
 
-## Development TODO list
+## TODO
+- [ ] map selector
+- [ ] collisions
+- [ ] debug box (coords, map, framerate etc)
+- [ ] player camera
+
+## General TODO list
 - [ ] **entity actions**
     - [x] 8 direction walking
     - [x] 4 direction walking animations
