@@ -1,35 +1,43 @@
 using System.Collections.Generic;
-using System.Linq;
+using Microsoft.Xna.Framework;
 
 public class Scene : Component
 {
-    public Player Player;
 	public Map Map;
-	public Scene(List<Map> maps)
-	{
-		// todo modify
-		Map = maps[0];
-		Player = new();
-    }
+	public List<Component> components = new();
+
 	public Scene(Map map)
 	{
 		Map = map;
-		Player = new();
     }
 
-    public void LoadAssets()
+	public void MoveEntity(Entity entity, Vector2 position)
 	{
-        Player.LoadSprites();
-    }
+		entity.currentPosition = position;
+	}
+
+	public void SpawnEntity(Entity entity, Vector2 position)
+	{
+		entity.currentPosition = position;
+		entity.LoadSprites();
+		components.Add(entity);
+	}
 
     public override void Draw()
     {
 		Map.Draw();
-		Player.Draw();
+		
+		foreach(Component comp in components)
+		{
+			comp.Draw();
+		}
 	}
 
     public override void Update()
     {
-        Player.Update();
+        foreach(Component comp in components)
+		{
+			comp.Update();
+		}
     }
 }

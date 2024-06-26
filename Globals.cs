@@ -86,7 +86,6 @@ public static class Globals
         return result;
     }
 
-    // todo:: remove
     public static bool HasNotClickedHere(Rectangle rectangle, bool isLeftClick)
     {
         var result = false;

@@ -3,7 +3,6 @@ using System.Linq;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 
 public class Map : Component
 {
@@ -15,7 +14,8 @@ public class Map : Component
 
     public Dictionary<Vector2, List<Texture2D>> map = new();
     public int Level;
-    private string MapName;
+    public string MapName;
+    
     public Map(string Name) 
     {
         MapName = Name;

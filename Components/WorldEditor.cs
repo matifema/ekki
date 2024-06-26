@@ -41,7 +41,7 @@ public class WorldEditor: Component
 		if (Keyboard.GetState().IsKeyDown(Keys.F3) && Keyboard.GetState() != _previousKeypress)
 		{
 			Console.WriteLine("Reloading map...");
-			Globals.CurrentScene.Map.LoadMap("Spawn");
+			Globals.CurrentScene.Map.LoadMap(Globals.CurrentScene.Map.MapName);
 			Console.WriteLine("Map reloaded!");
 		}
 

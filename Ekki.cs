@@ -61,7 +61,8 @@ namespace mygame
             (
                 new Map("Spawn")
             );
-            Globals.CurrentScene.LoadAssets();
+
+            Globals.CurrentScene.SpawnEntity(new Player(), new Vector2(16*16,8*16));
         }
 
         protected override void Update(GameTime gameTime)

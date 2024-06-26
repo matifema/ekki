@@ -5,20 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-enum Direction
+public class Player : Entity
 {
-    UP,
-    DOWN,
-    LEFT,
-    RIGHT
-}
-
-public class Player : Component
-{
-    internal float velocity = 1;
-    internal Texture2D currentSprite;
-    internal Vector2 currentPosition = new(0, 0);
-    internal Direction currentDirection = Direction.DOWN;
     internal List<Texture2D> upIdle, leftIdle, rightIdle, upWalk, leftWalk, rightWalk, currentAnimation;
 
     public Player() { }
@@ -55,7 +43,7 @@ public class Player : Component
         }
     }
 
-    internal void LoadSprites()
+    public override void LoadSprites()
     {
         upIdle = Globals.CutSpriteSheet(Globals.Content.Load<Texture2D>("Idle_02_Back_L-Sheet"));
         leftIdle = Globals.CutSpriteSheet(Globals.Content.Load<Texture2D>("Idle_01_Front_L-Sheet"));
@@ -72,15 +60,15 @@ public class Player : Component
     public override void Update() 
     {
         CheckForMovement();
+        if (Globals.renderedFrames % 10 == 0)
+        {
+            // loops throu the animation frames, 1 every 10 frames
+            currentSprite = currentAnimation[currentAnimation.IndexOf(currentSprite) == currentAnimation.Count - 1 ? 0 : currentAnimation.IndexOf(currentSprite) + 1];
+        }
     }
 
     public override void Draw()
     {
-        if (Globals.renderedFrames % 15 == 0)
-        {
-            currentSprite = currentAnimation[currentAnimation.IndexOf(currentSprite) == currentAnimation.Count - 1 ? 0 : currentAnimation.IndexOf(currentSprite) + 1];
-        }
-
         Globals.SpriteBatch.Draw(currentSprite, currentPosition, Color.White);
     }
 }
